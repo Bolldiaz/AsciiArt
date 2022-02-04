@@ -22,13 +22,11 @@ Shell:
     I chose use this collection to enable find/add/remove of chars in efficient time of O(1), another reason
     was the necessity of one instance of each char in the set which supported by an HashSet.
 
-
 -----------------------------
 -    Answers to questions
 -----------------------------
 
 1) findDuplicate:
-
     I used the approach of floyd-cycle solution, that has learned in Discrete-Mathematics course.
     By using "fast" and "slow" pointers which jump between the values of the array the duplicated value can be
     recognized.
@@ -39,7 +37,6 @@ Shell:
     From the same reason, the second meeting would also be bounded to O(n).
 
 2) uniqueMorseRepresentations:
-
     I chose the HashSet collection to contain all the unique morse-words decoded from the given ascii-words array.
 
     run-time:
@@ -50,7 +47,7 @@ Shell:
     4) append the correspond morse-code to the StringBuilder                |    O(1) (2@)
     5) add StringBuilder to the HashSet                                     |    O(1)
 
-    (1@) - converting each char is O(1) because I used a constant morse-codes array so that:
-          arr[i] = morse(char(a+i)) which equivalent to arr[c-a] = morse(c) where c is a char in w(i)
-    (2@) - code length is bound by 4 so appending it to the builder will take O(1) because no realloc will
-           take place (StringBuilder capacity was defined to 4*s(i) which bound the sum of the word decoding)
+    (1@) converting each char is O(1) because I used a constant morse-codes array so that:
+    arr[i] = morse(char(a+i)) which equivalent to arr[c-a] = morse(c) where c is a char in w(i).
+    (2@) code length is bound by 4 so appending it to the builder will take O(1) because no realloc will
+    take place (StringBuilder capacity was defined to 4*s(i) which bound the sum of the word decoding).
